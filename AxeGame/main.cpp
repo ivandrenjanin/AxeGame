@@ -50,51 +50,51 @@ int main()
 		//}
 
 		// Checking for collision between circle and axe using math
-		int p = circleX;
-		int q = circleY;
-		int r = circleRadius;
-		double rSquared = pow(r, 2);
+		int p{ circleX };
+		int q{ circleY };
+		int r{ circleRadius };
+		double rSquared{ pow(r, 2) };
 
-		int coordXa = axeX;
-		int coordYa = axeY;
+		int coordXa{ axeX };
+		int coordYa{ axeY };
 
-		double rA = pow(coordXa - p, 2) + pow(coordYa - q, 2);
+		double rA{ pow(coordXa - p, 2) + pow(coordYa - q, 2) };
 
-		int coordXb = axeX + axeLength;
-		int coordYb = axeY;
+		int coordXb{ axeX + axeLength };
+		int coordYb{ axeY };
 
-		double rB = pow(coordXb - p, 2) + pow(coordYb - q, 2);
+		double rB{ pow(coordXb - p, 2) + pow(coordYb - q, 2) };
 
-		int coordXc = axeX;
-		int coordYc = axeY + axeLength;
+		int coordXc{ axeX };
+		int coordYc{ axeY + axeLength };
 
-		double rC = pow(coordXc - p, 2) + pow(coordYc - q, 2);
+		double rC{ pow(coordXc - p, 2) + pow(coordYc - q, 2) };
 
-		int coordXd = axeX + axeLength;
-		int coordYd = axeY + axeLength;
+		int coordXd{ axeX + axeLength };
+		int coordYd{ axeY + axeLength };
 
-		double rD = pow(coordXd - p, 2) + pow(coordYd - q, 2);
+		double rD{ pow(coordXd - p, 2) + pow(coordYd - q, 2) };
 
-		int topAxeEdge = axeY;
-		int bottomAxeEdge = axeY + axeLength;
-		int leftAxeEdge = axeX;
-		int rightAxeEdge = axeX + axeLength;
+		int topAxeEdge{ axeY };
+		int bottomAxeEdge{ axeY + axeLength };
+		int leftAxeEdge{ axeX };
+		int rightAxeEdge{ axeX + axeLength };
 
 		// Circle edges coordinates
-		int coordXe = p;
-		int coordYe = q - r;
+		int coordXe{ p };
+		int coordYe{ q - r };
 
-		int coordXg = p;
-		int coordYg = q + r;
+		int coordXg{ p };
+		int coordYg{ q + r };
 
-		int coordXh = p - r;
-		int coordYh = q;
-		
-		int coordXF = p + r;
-		int coordYF = q;
+		int coordXh{ p - r };
+		int coordYh{ q };
+
+		int coordXF{ p + r };
+		int coordYF{ q };
 
 		// Check which sumCoord is smallest which means it is the closest to the circle center
-		int closestSumCoord = std::min({ rA, rB, rC, rD });
+		double closestSumCoord{ std::min({ rA, rB, rC, rD }) };
 
 		// If it is closest draw a line between the two points (circle center and closest axe corner)
 		if (closestSumCoord == rA)
