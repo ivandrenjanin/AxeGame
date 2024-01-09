@@ -93,7 +93,7 @@ int main()
 		int coordXF = p + r;
 		int coordYF = q;
 
-		// Check which sumCoord is closest to sumPQ
+		// Check which sumCoord is smallest which means it is the closest to the circle center
 		int closestSumCoord = std::min({ rA, rB, rC, rD });
 
 		// If it is closest draw a line between the two points (circle center and closest axe corner)
